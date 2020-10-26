@@ -9,7 +9,8 @@ public class House {
 	private int sqFt;
 	private int garageCapacity;
 	
-	public House() {  
+	public House() { 
+		this(79410);
 	}
 	public House(int zipcode) { 
 		this(zipcode, 4);
@@ -37,7 +38,7 @@ public House(int zipcode, int numRooms, int numBath, int cost, int sqFt, int gar
 	this.garageCapacity=garageCapacity;
 }
 public static void main(String [] args) { 
-	House H=new House(74910);  
+	House H=new House();  
 	System.out.println(H);
 }
 @Override
