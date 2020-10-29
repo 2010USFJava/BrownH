@@ -1,5 +1,5 @@
 package com.revature.chaining;
-
+//chaining practice 
 public class House {
 	
 	private int zipcode;
