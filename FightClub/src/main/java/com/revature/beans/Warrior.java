@@ -3,6 +3,7 @@ package com.revature.beans;
 import java.io.Serializable;
 
 import com.revature.util.FileStuff;
+import com.revature.util.LogThis;
 import com.revature.util.Roster;
 
 public class Warrior implements Serializable {
@@ -17,6 +18,7 @@ public class Warrior implements Serializable {
 	public Warrior() {
 		Roster.warriorList.add(this);
 		FileStuff.writeWarriorFile(Roster.warriorList);
+	
 	}
 
 	public Warrior(String name, int hp, int attackPower) {
@@ -26,6 +28,7 @@ public class Warrior implements Serializable {
 		this.attackPower = attackPower;
 		Roster.warriorList.add(this);
 		FileStuff.writeWarriorFile(Roster.warriorList);
+		LogThis.LogIt("info", "A new warrior,"+ this.getName()+",  has entered the arena!");
 	}
 
 	public String getName() {
