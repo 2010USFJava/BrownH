@@ -18,8 +18,8 @@ public class Customers implements Serializable {
 	private String password;
 	private int accountNum;
 	
-	static Scanner in = new Scanner(System.in);
-			static String ans=in.nextLine();
+	protected static Scanner in = new Scanner(System.in);
+			protected static String ans=in.nextLine();
 	public Customers() {
 		Records.customerList.add(this);
 		Files.writeCustomerFile(Records.customerList);
@@ -33,33 +33,7 @@ public class Customers implements Serializable {
 		this.password= password;
 		this.accountNum= accountNum;
 	}
-	public static void createNewCustomer() {
-		Customers customer= new Customers();
-		System.out.println("Welcome. Please enter your first name:");
-		ans=customer.getFirstName();
-		customer.setFirstName(ans);
-		in.next();
-		
-		System.out.println("Please enter your last name: ");
-		ans=customer.getLastName();
-		customer.setLastName(ans);
-		in.next();
-		
-		System.out.println("Choose a username:"); 
-		Customers apply = new Customers();
-		ans=apply.getUsername();
-		apply.setUsername(ans);
-		Account.createAccountNum();
-		in.next();
-		
-		System.out.println("Choose a password:");
-		ans=apply.getPassword();
-		apply.setPassword(ans);
-		in.next();
-		
-		System.out.println("Great! Congradulations you've just created a new account.");
-		
-	}
+	
 
 	public String getFirstName() {
 		return firstName;
