@@ -12,8 +12,6 @@
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.io.OutputStream"/>
     <fullyQualifiedTypeName name="java.io.InputStream"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="BankingApp.Account"/>
     <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
@@ -23,12 +21,9 @@
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="com.revature.beans.Warrior"/>
-    <fullyQualifiedTypeName name="com.revature.util.Roster"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
-    <fullyQualifiedTypeName name="com.revature.util.FileStuff"/>
     <fullyQualifiedTypeName name="org.apache.logging.log4j.LogManager"/>
     <fullyQualifiedTypeName name="org.apache.logging.log4j.Logger"/>
-    <fullyQualifiedTypeName name="com.revature.util.LogThis"/>
     <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
@@ -39,4 +34,11 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.revature.util.LogThis"/>
+    <fullyQualifiedTypeName name="com.revature.util.Log"/>
+    <fullyQualifiedTypeName name="com.revature.util.FileStuff"/>
+    <fullyQualifiedTypeName name="com.revature.util.Roster"/>
+    <fullyQualifiedTypeName name="com.revature.menu.Menu"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
 </qualifiedTypeNameHistroy>

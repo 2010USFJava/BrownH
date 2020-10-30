@@ -1,18 +1,16 @@
-package com.revature.users;
+package com.revature.menu;
+
+import java.util.Random;
 import java.util.Scanner;
 
-public class Login extends Customers{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -7293701364525481737L;
+import com.revature.users.Customers;
+import com.revature.util.Log;
 
-	public static void main(String [] args) {
-		selectOption();
-}
+public class Menu {
+
 	static int option;
-	static Scanner login = new Scanner(System.in);
-		private static void selectOption() {
+	static Scanner ans = new Scanner(System.in);
+		public static void selectOption() {
 			System.out.println("How can I help you?"
 					+ "\nPlease select from the option displayed below"
 					+ "\n1. Apply for a new account"
@@ -22,11 +20,12 @@ public class Login extends Customers{
 					+ "\n5. Employee login"
 					+ "\n6. Admin login"
 					+ "\n7. Other");
-			option = login.nextInt();
+			option = ans.nextInt();
 			switch(option) {
 			case 1: 
-				System.out.println("Great! Let's get started");
 				createNewCustomer();
+				
+				selectOption();
 				break;
 			case 2:
 				userLogin();
@@ -55,18 +54,43 @@ public class Login extends Customers{
 		
 	}
 		public static void userLogin() {
-		Login user= new Login();
+		Menu user= new Menu();
 		System.out.println("Please enter your username:");
-		ans=user.getUsername();
-		user.setUsername(ans);
-		in.next();
+		String username=ans.next();
+		
 		
 		System.out.println("Please enter your password:");
-		ans=user.getPassword();
-		user.setPassword(ans);
-		in.next();
+		String password=ans.next();
+		
 		
 	}
+		public static void createNewCustomer() {
+			System.out.println("Great! Let's get started");
+			
+			System.out.println("Please enter your first name:");
+			String firstName=ans.next();
+			
+			System.out.println("Please enter your last name: ");
+			String lastName=ans.next();
+			
+			System.out.println("Choose a username:"); 
+			String username=ans.next();
+			
+			System.out.println("Choose a password:");
+			String password=ans.next();
+			
+			System.out.println("You will be assigned an Account Number");
+			Random accountNum = new Random();
+			
+			Customers a= new Customers(firstName,lastName,username,password,accountNum);
+			Log.LogIt("info", a.getFirstName()+" was added to customer database");
+			System.out.println("Great! You've just created a new account."
+					+ "\nYou will be redirected back to the main menu to login");
+	
+		
+			
+		}
+
 
 
 }
