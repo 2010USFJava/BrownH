@@ -3,7 +3,7 @@ package com.revature.util;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class LogThis {
+public class Log {
 	static Logger logger= LogManager.getLogger();
 
 	public static void LogIt(String level, String message) {
@@ -15,16 +15,16 @@ public class LogThis {
 			logger.warn(message);
 			break;
 		case "error":
-			logger.error(message);
+			logger.warn(message);
 			break;
 		case "fatal":
-			logger.fatal(message);
+			logger.warn(message);
 			break;
 		case "info":
-			logger.info(message);
+			logger.warn(message);
 			break;
 		case "trace":
-			logger.trace(message);
+			logger.warn(message);
 			break;
 		default:
 			System.err.println("logger dumb");

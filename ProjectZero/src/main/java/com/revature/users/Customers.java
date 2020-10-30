@@ -1,31 +1,52 @@
-package BankingApp;
+package com.revature.users;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class User {
+import com.revature.util.Files;
+import com.revature.util.Records;
 
+public class Customers implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1862896983436739908L;
 	private String firstName;
 	private String lastName;
 	private String username;
 	private String password;
 	private int accountNum;
 	
-	Scanner in = new Scanner(System.in);
-			String ans=in.nextLine();
-	public User() {
+	static Scanner in = new Scanner(System.in);
+			static String ans=in.nextLine();
+	public Customers() {
+		Records.customerList.add(this);
+		Files.writeCustomerFile(Records.customerList);
 				
 	}
 	
-	public User(String firstName,String lastName,String username,String password, int accountNum) {
+	public Customers(String firstName,String lastName,String username,String password, int accountNum) {
 		this.firstName= firstName;
 		this.lastName= lastName;
 		this.username= username;
 		this.password= password;
 		this.accountNum= accountNum;
 	}
-	public void createNewCustomer() {
+	public static void createNewCustomer() {
+		Customers customer= new Customers();
+		System.out.println("Welcome. Please enter your first name:");
+		ans=customer.getFirstName();
+		customer.setFirstName(ans);
+		in.next();
+		
+		System.out.println("Please enter your last name: ");
+		ans=customer.getLastName();
+		customer.setLastName(ans);
+		in.next();
+		
 		System.out.println("Choose a username:"); 
-		User apply = new User();
+		Customers apply = new Customers();
 		ans=apply.getUsername();
 		apply.setUsername(ans);
 		Account.createAccountNum();
@@ -36,17 +57,7 @@ public class User {
 		apply.setPassword(ans);
 		in.next();
 		
-		User customer= new User();
-		System.out.println("Welcome. Please enter your first name:");
-		ans=customer.getFirstName();
-		customer.setFirstName(ans);
-		in.next();
-		
-		System.out.println("Welcome "+firstName+"! Please enter your last name: ");
-		ans=customer.getLastName();
-		customer.setLastName(ans);
-		
-		
+		System.out.println("Great! Congradulations you've just created a new account.");
 		
 	}
 

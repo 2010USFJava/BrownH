@@ -1,4 +1,4 @@
-package BankingApp;
+package com.revature.users;
 
 import java.util.Random;
 
