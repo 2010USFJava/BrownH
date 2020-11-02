@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 import com.revature.users.Customers;
 import com.revature.util.Log;
+import com.revature.util.Records;
+
 
 public class Menu {
 
@@ -39,6 +41,7 @@ public class Menu {
 				System.out.println("Another day, another dollar");
 				userLogin();
 				System.out.println("login successful. Employee access level granted");
+				employeeFunctions();
 				break;
 			case 6:
 				System.out.println("Cha-Ching!");
@@ -88,6 +91,29 @@ public class Menu {
 					+ "\nYou will be redirected back to the main menu to login");
 	
 		
+			
+		}
+		public static void employeeFunctions() {
+			System.out.println("Please choose an option:"
+					+ "\n1. Approve/Deny applications"
+					+ "\n2. View customer information");
+			option=ans.nextInt();
+			switch(option) {
+			case 1: 
+				//create approve/deny method
+				employeeFunctions();
+				break;
+			case 2: 
+				viewCustomerInfo();
+				employeeFunctions();
+				break;
+			}
+			
+		}
+		public static void viewCustomerInfo() {
+			System.out.println("Please enter customer name");
+			String first=ans.next();
+			Customers a=Records.findCustomerByName(first);
 			
 		}
 
