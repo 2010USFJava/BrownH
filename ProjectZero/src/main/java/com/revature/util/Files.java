@@ -9,6 +9,7 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import com.revature.users.Customers;
 
 public class Files {
@@ -30,16 +31,18 @@ public class Files {
 	@SuppressWarnings("unchecked")
 	public static void readCustomerFile() {
 		try {
-			ObjectInputStream objectIn = new ObjectInputStream(new FileInputStream(customerFile));
-			try {
-				Records.customerList =(ArrayList<Customers>) objectIn.readObject();
-			} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-			}
+			ObjectInputStream objectIn= new ObjectInputStream(new FileInputStream(customerFile));
+			Records.customerList=(ArrayList<Customers>)objectIn.readObject();
 		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
+	
 }

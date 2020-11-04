@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.revature.users.Customers;
-
+import com.revature.menu.*;
 public class Records {
 
 	public static List<Customers> customerList= new ArrayList<Customers>();
@@ -17,7 +17,7 @@ public class Records {
 			}
 		}
 		System.out.println("Customer not found");
-		
+		Menu.selectOption();
 		return null;
 		
 	}

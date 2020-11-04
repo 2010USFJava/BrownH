@@ -1,10 +1,10 @@
 package com.revature.users;
 
 import java.io.Serializable;
-import java.util.Random;
 import java.util.Scanner;
 
 import com.revature.util.Files;
+import com.revature.util.Log;
 import com.revature.util.Records;
 
 public class Customers implements Serializable {
@@ -17,7 +17,8 @@ public class Customers implements Serializable {
 	private String lastName;
 	private String username;
 	private String password;
-	Random accountNum = new Random();
+	private String accountNum;
+
 	
 	protected static Scanner in = new Scanner(System.in);
 			protected static String ans=in.nextLine();
@@ -27,12 +28,15 @@ public class Customers implements Serializable {
 				
 	}
 	
-	public Customers(String firstName,String lastName,String username,String password, Random accountNum) {
+	public Customers(String firstName,String lastName,String username,String password, String accountNum) {
 		this.firstName= firstName;
 		this.lastName= lastName;
 		this.username= username;
 		this.password= password;
 		this.accountNum= accountNum;
+		Files.writeCustomerFile(Records.customerList);
+		Log.LogIt("info","New customer "+this.firstName+" has been added");
+		
 	}
 	
 
@@ -68,11 +72,11 @@ public class Customers implements Serializable {
 		this.password = password;
 	}
 
-	public Random getAccountNum() {
+	public String getAccountNum() {
 		return accountNum;
 	}
 
-	public void setAccountNum(Random accountNum) {
+	public void setAccountNum(String accountNum) {
 		this.accountNum = accountNum;
 	}
 

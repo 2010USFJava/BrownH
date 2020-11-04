@@ -1,17 +1,14 @@
 package com.revature.users;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Account {
-	enum AccountType {
-		checking,
-		savings,
-		joint,
-		
-	}
+	static Scanner input = new Scanner(System.in);
+	int amt;
 	
 	private static int accountNum;
-	private double balance;
+	private static double balance;
 	private double deposit;
 	private double withdraw;
 	
@@ -32,11 +29,11 @@ public class Account {
 	public void setAccountNum(int accountNum) {
 		Account.accountNum = accountNum;
 	}
-	public double getBalance() {
+	public static double getBalance() {
 		return balance;
 	}
 	public void setBalance(double balance) {
-		this.balance = balance;
+		Account.balance = balance;
 	}
 	@Override
 	public String toString() {
@@ -53,6 +50,19 @@ public class Account {
 	}
 	public void setWithdraw(double withdraw) {
 		this.withdraw = withdraw;
+	}
+	int deposit () {
+		System.out.println("How much do you want to deposit? \n$");
+		amt = input.nextInt();
+		if (amt < 0) {
+			System.out.println("Invalid Input");
+			return 1;
+			
+		}
+		balance = balance + amt;
+		System.out.println("Your new balance is: \n$"+balance);
+		return 0;
+		
 	}
 
 	
