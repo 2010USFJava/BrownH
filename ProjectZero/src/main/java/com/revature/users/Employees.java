@@ -2,12 +2,7 @@ package com.revature.users;
 
 
 public class Employees {
-	enum AccessLevel {
-		customer,
-		employee,
-		admin
-		
-	}
+	
 	public String username;
 	public String password;
 	public String employeeNum;

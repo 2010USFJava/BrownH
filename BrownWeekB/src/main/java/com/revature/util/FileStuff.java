@@ -12,14 +12,14 @@ import java.util.List;
 import com.revature.beans.Company;
 
 public class FileStuff {
-	public static final String companyFile="companyList.txt";
+	public static final String companyFile = "companyList.txt";
 
-	//write method
+	// write method
 	public static void writeCompanyFile(List<Company> cList) {
 		try {
 			ObjectOutputStream objectOut = new ObjectOutputStream(new FileOutputStream(companyFile));
-		objectOut.writeObject(cList);
-		objectOut.close();
+			objectOut.writeObject(cList);
+			objectOut.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -28,13 +28,14 @@ public class FileStuff {
 			e.printStackTrace();
 		}
 	}
-	
+
 	// read method
 	@SuppressWarnings("unchecked")
 	public static void readCompanyFile() {
 		try {
-			ObjectInputStream objectIn= new ObjectInputStream(new FileInputStream(companyFile));
-			Roster.companyList=(ArrayList<Company>)objectIn.readObject();
+			@SuppressWarnings("resource")
+			ObjectInputStream objectIn = new ObjectInputStream(new FileInputStream(companyFile));
+			Roster.companyList = (ArrayList<Company>) objectIn.readObject();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -46,5 +47,5 @@ public class FileStuff {
 			e.printStackTrace();
 		}
 	}
-	
+
 }

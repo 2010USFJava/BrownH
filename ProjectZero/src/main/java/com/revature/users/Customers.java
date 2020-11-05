@@ -13,11 +13,11 @@ public class Customers implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1862896983436739908L;
-	private String firstName;
-	private String lastName;
-	private String username;
-	private String password;
-	private String accountNum;
+	public String firstName;
+	public String lastName;
+	public static String username;
+	public static String password;
+	public String accountNum;
 
 	
 	protected static Scanner in = new Scanner(System.in);
@@ -31,8 +31,8 @@ public class Customers implements Serializable {
 	public Customers(String firstName,String lastName,String username,String password, String accountNum) {
 		this.firstName= firstName;
 		this.lastName= lastName;
-		this.username= username;
-		this.password= password;
+		Customers.username= username;
+		Customers.password= password;
 		this.accountNum= accountNum;
 		Files.writeCustomerFile(Records.customerList);
 		Log.LogIt("info","New customer "+this.firstName+" has been added");
@@ -61,7 +61,7 @@ public class Customers implements Serializable {
 	}
 
 	public void setUsername(String username) {
-		this.username = username;
+		Customers.username = username;
 	}
 
 	public String getPassword() {
@@ -69,7 +69,7 @@ public class Customers implements Serializable {
 	}
 
 	public void setPassword(String password) {
-		this.password = password;
+		Customers.password = password;
 	}
 
 	public String getAccountNum() {

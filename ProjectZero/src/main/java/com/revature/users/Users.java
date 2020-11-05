@@ -4,6 +4,7 @@ public class Users {
 	public String username;
 	public String password;
 	public String accessType;
+
 	public Users() {
 		super();
 		// TODO Auto-generated constructor stub

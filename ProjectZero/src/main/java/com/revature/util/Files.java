@@ -9,8 +9,8 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import com.revature.users.Customers;
+
 
 public class Files {
 	public static final String customerFile="customerList.txt";
@@ -31,8 +31,9 @@ public class Files {
 	@SuppressWarnings("unchecked")
 	public static void readCustomerFile() {
 		try {
+			@SuppressWarnings("resource")
 			ObjectInputStream objectIn= new ObjectInputStream(new FileInputStream(customerFile));
-			Records.customerList=(ArrayList<Customers>)objectIn.readObject();
+			Records.customerList = (ArrayList<Customers>) objectIn.readObject();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -44,5 +45,5 @@ public class Files {
 			e.printStackTrace();
 		}
 	}
-	
+
 }
