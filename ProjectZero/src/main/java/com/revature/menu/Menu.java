@@ -2,7 +2,6 @@ package com.revature.menu;
 
 import java.util.Scanner;
 
-import com.revature.function.Transactions;
 import com.revature.function.Search;
 import com.revature.users.Account;
 import com.revature.users.Customers;
@@ -11,7 +10,6 @@ import com.revature.util.Records;
 
 public class Menu {
 	static Account account = new Account();
-	static Transactions trans = new Transactions();
 	static int option;
 	static Scanner ans = new Scanner(System.in);
 
@@ -59,9 +57,11 @@ public class Menu {
 			Account.getBalance();
 			break;
 		case 2:
-			trans.makeDeposit();
+			//trans.makeDeposit();
+			break;
 		case 3:
-			trans.makeWithdraw();
+			//trans.makeWithdraw();
+			break;
 		case 4:
 			System.out.println("Goodbye");
 		default:

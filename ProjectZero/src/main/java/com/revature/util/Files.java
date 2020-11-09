@@ -13,7 +13,7 @@ import com.revature.users.Customers;
 
 
 public class Files {
-	public static final String customerFile="customerList.txt";
+	public static final String customerFile= "customerList.txt";
 	//write method
 	public static void writeCustomerFile(List<Customers> cList) {
 		try {
