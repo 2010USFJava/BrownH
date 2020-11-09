@@ -16,6 +16,30 @@ import com.revature.beans.Customer;
 import com.revature.functions.Transactions;
 
 public class MenuTest {
+	
+	static Customer a;
+	static Customer b;
+	static Accounts acc1;
+	static Accounts acc2;
+	@Mock static ArrayList<Customer> mockRoster;
+	@Mock static ArrayList<Accounts> mockRoster2;
+	@Before
+	static void viewAccounnt() {
+		System.out.println("loading mockRoster");
+		a = new Customer("John","Doe","jdoe", "1234", 1, true);
+		b = new Customer("Jane","Doe","jdoe", "1234", 2, true);
+		acc1 = new Accounts(accountType.CHECKING,true, 500, 12,null);
+		acc2 = new Accounts(accountType.SAVING,true, 500, 15,null);	
+		mockRoster.add(a);
+		mockRoster.add(b);
+		Mockito.verify(mockRoster).add(a);
+		  Mockito.verify(mockRoster).add(b);
+		  Mockito.verify(mockRoster2).add(acc1);
+		  Mockito.verify(mockRoster2).add(acc2);
+		  System.out.println(mockRoster.toString());
+		  System.out.println(mockRoster2.toString());
+	}
+	
 	@BeforeClass
 	public static void intitialSetUp() {
 		System.out.println("I run once before everything");
@@ -46,7 +70,7 @@ public class MenuTest {
 	}
 	@Test
 	public void makeDeposit() {
-		
+
 	}
 	@Test
 	public void makeWithdraw() {
@@ -116,17 +140,5 @@ public class MenuTest {
 		
 	}
 	
-	@Mock static ArrayList<Accounts> mockRoster;
 	
-	@Before
-	static void viewAccounnt() {
-		System.out.println("loading mockRoster");
-		Accounts a= new Accounts(accountType.CHECKING,true, 500, 12,null);
-		Accounts b= new Accounts(accountType.SAVING,true, 500, 15,null);	
-		mockRoster.add(a);
-		mockRoster.add(b);
-		Mockito.verify(mockRoster).add(a);
-		  Mockito.verify(mockRoster).add(b);
-		  System.out.println(mockRoster.toString());
-	}
 }
