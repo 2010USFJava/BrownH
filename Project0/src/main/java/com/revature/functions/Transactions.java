@@ -111,7 +111,7 @@ public class Transactions implements Serializable {
 
 
 	public static void viewBalance() {
-		System.out.println("Balance :"+Accounts.getBalance());
+		System.out.println("Balance :$"+Accounts.getBalance());
 		Menu.customerOptions();
 	}
 

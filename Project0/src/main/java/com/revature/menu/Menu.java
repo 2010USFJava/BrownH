@@ -22,7 +22,9 @@ public class Menu {
 	static Scanner ans = new Scanner(System.in);
 
 	public static void selectOption() {
-		System.out.println("Welome to Bailey Boos Bank");
+		System.out.println("\n-------------------------------------------------------------------------------"
+				+ "\nWelome to Basic Bank"
+				+ "\n-------------------------------------------------------------------------------");
 		System.out.println("How can I help you?" + "\nPlease select from the option displayed below"
 				+ "\n1. Apply for a new account" + "\n2. Customer login" + "\n3. Employee login"+"\n4. Admin login"
 				+ "\n5. Other");
@@ -42,7 +44,6 @@ public class Menu {
 		case 3:
 			System.out.println("Another day, another dollar");
 			employeeLogin();
-			
 			employeeFunctions();
 			break;
 		case 4:
@@ -100,10 +101,10 @@ public class Menu {
 			
 		}
 		
-		System.out.println("------------------------------------------------------"
+		System.out.println("-------------------------------------------------------------------------------"
 		+"\nGreat! You've just submitted your application to open a new account."
 				+ "\nYour application is under review."
-		+"\n------------------------------------------------------------------------");
+		+"\n-------------------------------------------------------------------------------");
 		new Accounts(type, false, 0,Customer.accountNum, null );
 		LogThis.LogIt("info", "New application submitted for review");
 		System.out.print(Roster.accountList.toString());
@@ -172,13 +173,13 @@ public class Menu {
 		System.out.println("Choose a password:");
 		String password = ans.next();
 
-		System.out.println("You will be assigned an account");
+		System.out.println("You will be assigned an account number");
 		int accountNum = getUniqueAccountNum();
 		System.out.println("Your new account number is "+accountNum);
 		boolean approved=false;
 		Customer a = new Customer(firstName, lastName, username, password, accountNum, approved);
 		LogThis.LogIt("info", Customer.getFirstName() + " was added to customer database");
-		System.out.println(Roster.accountList.toString());
+		System.out.println(Roster.customerList.toString());
 
 	}
 
@@ -218,7 +219,7 @@ public class Menu {
 
 	public static void adminFunction() {
 		System.out.println("Please choose an option:" + "\n1. Delete Customer Account" + "\n2. Employee Function Menu"
-				+ "\n3. Add new employee"+"\n4. Add new admin \n5. Logout");
+				+ "\n3. Add new employee"+"\n4. Add new admin"+"\n5. Customer Fuctions"+"\n6. Logout");
 		option = ans.nextInt();
 		switch (option) {
 		case 1:
@@ -237,6 +238,9 @@ public class Menu {
 			adminFunction();
 			break;	
 		case 5:
+			customerOptions();
+			break;
+		case 6:
 			selectOption();
 			break;
 		default:
@@ -282,7 +286,7 @@ public class Menu {
 		
 		Admin a= new Admin(username, password);
 		LogThis.LogIt("info", "New Admin login was created");
-		System.out.println(Roster.employeeList.toString());
+		System.out.println(Roster.adminList.toString());
 
 		
 		
@@ -330,7 +334,7 @@ public class Menu {
 		
 		System.out.println(
 				"Please choose an option:" + "\na. View Balance" + "\nb. Deposit" + "\nc. Withdraw" + "\nd. Transfer"+"\ne. Return to Main Menu");
-		String input = ans.nextLine();
+		String input = ans.next();
 		switch (input.toLowerCase()) {
 		case "a":
 			Transactions.viewBalance();

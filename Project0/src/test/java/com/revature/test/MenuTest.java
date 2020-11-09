@@ -58,18 +58,29 @@ public class MenuTest {
 	}
 	@Test 
 	public void approveAccount() {
+		Customer.setApproved(true);
+		System.out.println(Customer.approved);
+		assertEquals(true,Customer.approved);
 	
 	}
 	@Test
 	public void deleteAccount() {
+		mockRoster.remove(a);
+		assertEquals(null,a);
 
 	}
 	@Test
 	public void transfer() {
 
 	}
+	
 	@Test
-	public void makeDeposit() {
+	public void makeInitialDeposit() {
+		Accounts a= new Accounts();
+		Accounts.setBalance(500);
+		double expected=500;
+		double actual=Accounts.getBalance();
+		assertEquals(expected,actual);
 
 	}
 	@Test
