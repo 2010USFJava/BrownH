@@ -13,11 +13,14 @@ public class AdminMenu {
 	static Scanner ans = new Scanner(System.in);
 	
 	public static void adminFunction() {
-		System.out.println("Please choose an option:" 
+		System.out.println("------------------------------------------------------------------------"
+				+ "\nPlease choose an option:" 
 				+ "\n1. View Customer Information" 
 				+ "\n2. Create New User"
 				+ "\n3. Update Last Name Existing User" 
-				+ "\n4. Delete User");
+				+ "\n4. Delete User"
+				+ "\n5. Logout"
+				+ "\n------------------------------------------------------------------------");
 		option = ans.nextInt();
 		switch (option) {
 		case 1:
@@ -34,6 +37,9 @@ public class AdminMenu {
 		case 4:
 			deleteCustomer();
 			adminFunction();
+			break;
+		case 5:
+			Menu.mainMenu();
 			break;
 		default:
 			System.out.println("Invalid Input. Try Again");

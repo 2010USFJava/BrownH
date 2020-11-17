@@ -16,13 +16,15 @@ public class CustomerMenu {
 	static Scanner ans = new Scanner(System.in);
 	
 	public static void customerOptions(Customer c) throws SQLException {
-		System.out.println("What would you like to do?"
+		System.out.println("------------------------------------------------------------------------"
+				+ "\nWhat would you like to do?"
 				+ "\n 1. View Account Balance"
 				+ "\n 2. Deposit"
 				+ "\n 3. Withdraw"
 				+ "\n 4. Open New Account"
 				+ "\n 5. Close Account"
-				+ "\n 6. Logout");
+				+ "\n 6. Logout"
+				+ "\n------------------------------------------------------------------------");
 		option = ans.nextInt();
 		switch(option) {
 		case 1:
@@ -47,6 +49,8 @@ public class CustomerMenu {
 			break;
 		case 6:
 			Menu.mainMenu();
+			break;
+			
 			default:
 				System.out.println("Invalid Input. Try Again");
 				customerOptions(c);

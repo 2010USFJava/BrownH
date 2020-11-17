@@ -24,7 +24,7 @@ public class Menu {
 	static ConnFactory cf = ConnFactory.getInstance();
 	static Connection conn = cf.getConnection();
 	
-	public static void mainMenu() throws SQLException {
+	public static void mainMenu()  {
 		System.out.println("\n**************************************************************************************"
 				+ "\n                                 Welome to Bank 2.0"
 				+ "\n**************************************************************************************");
