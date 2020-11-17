@@ -1,0 +1,30 @@
+Thank you for purchasing Bank 2.0
+
+Admin can only be modified in the database
+Default admin username: hbrown password: romeo
+ 
+To add admin:
+insert into admin (username,password) values 
+(1,'newUsername'), (2, 'newPassword');
+
+To delete admin:
+delete from admin where username='usernametodelete';
+
+To update admin password:
+update admin set password='newPassword' where username='Username';
+
+Admin can login inside the console
+Once successfully logged in Admin can:
+-view customers information
+-update customer infortmation
+-delete customer
+-add new customer
+
+Customers can register by creating new username and password
+Customers can login once registered
+Once successfully logged in Customer can:
+-open new account
+-delete account
+-deposit
+-withdraw
+

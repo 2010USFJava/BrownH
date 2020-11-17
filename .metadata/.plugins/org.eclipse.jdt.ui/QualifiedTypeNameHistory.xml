@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.io.InputStream"/>
-    <fullyQualifiedTypeName name="BankingApp.Account"/>
-    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
-    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-    <fullyQualifiedTypeName name="java.util.ListIterator"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
-    <fullyQualifiedTypeName name="java.util.Comparator"/>
-    <fullyQualifiedTypeName name="com.revature.beans.Warrior"/>
-    <fullyQualifiedTypeName name="org.apache.logging.log4j.LogManager"/>
-    <fullyQualifiedTypeName name="org.apache.logging.log4j.Logger"/>
-    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
-    <fullyQualifiedTypeName name="java.io.IOException"/>
-    <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
-    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="com.revature.beans.Company"/>
     <fullyQualifiedTypeName name="com.revature.service.Search"/>
     <fullyQualifiedTypeName name="com.revature.util.FileStuff"/>
@@ -41,10 +25,8 @@
     <fullyQualifiedTypeName name="com.revature.util.TransactionFile"/>
     <fullyQualifiedTypeName name="com.revature.functions.employeeMethods"/>
     <fullyQualifiedTypeName name="com.revature.functions.AdminFunctions"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Objects"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
-    <fullyQualifiedTypeName name="com.revature.beans.Accounts"/>
     <fullyQualifiedTypeName name="com.revature.beans.Employee"/>
     <fullyQualifiedTypeName name="com.revature.util.LogThis"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
@@ -52,12 +34,30 @@
     <fullyQualifiedTypeName name="com.revature.functions.Transactions"/>
     <fullyQualifiedTypeName name="org.mockito.Mockito"/>
     <fullyQualifiedTypeName name="com.revature.beans.Accounts.accountType"/>
-    <fullyQualifiedTypeName name="com.revature.beans.Admin"/>
-    <fullyQualifiedTypeName name="com.revature.menu.Menu"/>
     <fullyQualifiedTypeName name="com.revature.util.CustomerFile"/>
     <fullyQualifiedTypeName name="com.revature.util.Roster"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.mockito.Mock"/>
     <fullyQualifiedTypeName name="org.junit.Before"/>
+    <fullyQualifiedTypeName name="com.revature.beans.Admin"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="com.revature.beans.Album"/>
+    <fullyQualifiedTypeName name="com.revature.dao.AlbumDAO"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="com.revature.dao.PookiemanDAO"/>
+    <fullyQualifiedTypeName name="com.revature.dao.CustomerDAOImpl"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="com.revature.dao.AccountDAO"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.revature.daoimpl.CustomerDAOImpl"/>
+    <fullyQualifiedTypeName name="com.revature.util.ConnFactory"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="com.revature.exceptions.InvalidInputException"/>
     <fullyQualifiedTypeName name="com.revature.beans.Customer"/>
+    <fullyQualifiedTypeName name="com.revature.dao.CustomerDAO"/>
+    <fullyQualifiedTypeName name="com.revature.beans.Accounts"/>
+    <fullyQualifiedTypeName name="com.revature.menu.CustomerMenu"/>
+    <fullyQualifiedTypeName name="com.revature.menu.Menu"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 </qualifiedTypeNameHistroy>
