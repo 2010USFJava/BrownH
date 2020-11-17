@@ -42,11 +42,12 @@ public class MenuTest {
 		
 	}
 	@Test
-	public void deleteRow() throws SQLException {
-		//CustomerDAO cdi = new CustomerDAOImpl();
-		//Customer c = cdi.deleteCustomer(null);
-		//String result = c.toString();
-		//assertEquals(result, null);
+	public void deleteCustomer() throws SQLException {
+		CustomerDAO cdi = new CustomerDAOImpl();
+		Customer c = new Customer();
+				//cdi.deleteCustomer(c);
+		String result = c.toString();
+		assertEquals(result, null);
 	}
 	@SuppressWarnings("deprecation")
 	@Test
@@ -59,6 +60,17 @@ public class MenuTest {
 		double actual = updateBalance;
 		assertEquals(expected, actual);
 		
+		
+	}
+	@Test
+	public void testWithdraw() {
+		Accounts a =new Accounts(15,4000);
+		double withdraw = 200;
+		double updateBalance=a.getBalance()-withdraw;
+		a.setBalance(updateBalance);
+		double expected = 3800;
+		double actual = updateBalance;
+		assertEquals(expected, actual);
 		
 	}
 	

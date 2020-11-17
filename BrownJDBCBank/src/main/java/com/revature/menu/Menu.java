@@ -75,11 +75,12 @@ public class Menu {
 		String username = ans.next();
 		System.out.println("Please enter your password:");
 		String password = ans.next();
-		Customer c= new Customer (username, password);
+		//Customer c= new Customer (username, password);
 		CustomerDAO cdi = new CustomerDAOImpl();
 	        try {
+	        	Customer c= new Customer (username, password);
 	        	cdi.checkLogin(c);
-	   
+	     
 	                    if(username.equals(username)&&password.equals(password)) {
 
 	                  CustomerMenu.customerOptions(c);
